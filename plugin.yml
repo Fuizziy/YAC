@@ -2,6 +2,6 @@ name: YAC
 version: 1.0.0
 main: fr.fuizziy.yac.YAC
 commands:
-	noel:
-		description: The main command Advent Calendar related actions
-		aliases: [nawel, nowel, avent, avant, ca, yca]
+    noel:
+        description: The main command Advent Calendar related actions
+        aliases: [nawel, nowel, avent, avant, ca, yca]

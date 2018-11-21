@@ -3,9 +3,15 @@ package fr.fuizziy.yac.commands;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.plugin.java.JavaPlugin; 
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
 
+import fr.fuizziy.yac.Reference.Utils; 
+
+//TODO remove SuppressWarnings
+@SuppressWarnings("unused")
 public class C_Noel implements CommandExecutor {
+
 
 	private JavaPlugin plug; 
 	
@@ -15,8 +21,10 @@ public class C_Noel implements CommandExecutor {
 	}
 	
 	@Override
-	public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
-		// TODO Auto-generated method stub
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		if (!(sender instanceof Player))
+			sender.sendMessage(Utils.NOT_PLAYER.getMessage());
+		sender.sendMessage(Utils.ALREADY_OPENED.getMessage());
 		return false;
 	}
 
