@@ -3,11 +3,11 @@ package fr.fuizziy.yac.events;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class PlayerJoin implements Listener {
+public class E_PlayerJoin implements Listener {
 
 	private JavaPlugin plug;
 	
-	public PlayerJoin(JavaPlugin plug)
+	public E_PlayerJoin(JavaPlugin plug)
 	{
 		this.plug = plug;
 	}
