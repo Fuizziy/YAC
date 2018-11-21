@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import fr.fuizziy.yac.Reference;
+import fr.fuizziy.yac.Reference.EnabledCommands;
 import fr.fuizziy.yac.Reference.Utils; 
 
 //TODO remove SuppressWarnings
@@ -23,10 +24,9 @@ public class C_Noel implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if (Reference.workInProgress)
-			sender.sendMessage(Utils.WORK_IN_PROGRESS.getMessage());
-		if (!(sender instanceof Player))
-			sender.sendMessage(Utils.NOT_PLAYER.getMessage());
+		if (!C_Utils.command_pre_check(sender, EnabledCommands.NOEL))
+			return false;
+		sender.sendMessage(Utils.DEV_TEST.getMessage());
 		sender.sendMessage(Utils.ALREADY_OPENED.getMessage());
 		return false;
 	}
